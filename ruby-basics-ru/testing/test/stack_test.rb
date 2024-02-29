@@ -21,7 +21,7 @@ class StackTest < Minitest::Test
     stack1 = Stack.new
     stack1.push!('i')
     stack1.pop!
-    assert(stack1.size == 0)
+    assert(stack1.size.zero?)
   end
 
   def test_clear_stack
@@ -30,14 +30,11 @@ class StackTest < Minitest::Test
     stack1.push!('x')
     stack1.push!('z')
     stack1.clear!
-    assert(stack1.size == 0)
+    assert(stack1.empty?)
   end
 
   def test_empty_stack
     stack1 = Stack.new
-    stack1.push!('i')
-    stack1.push!('x')
-    stack1.push!('z')
     assert(stack1.empty?)
   end
   # END
