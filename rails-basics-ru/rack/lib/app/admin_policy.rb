@@ -12,7 +12,7 @@ class AdminPolicy
     if request.path == '/admin'
       [403, {}, []]
     else
-      @app.call(env)
+      [status, headers, body]
     end
     # END
   end
