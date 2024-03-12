@@ -11,7 +11,9 @@ module App
     Rack::Builder.new do |builder| #создает новый экземпляр класса 
       #Rack::Builder, позволяя конфигурировать middleware и приложение.
       builder.use AdminPolicy
-
+      # BEGIN
+      
+      # END
       builder.use Signature
 
       builder.run Router.new
