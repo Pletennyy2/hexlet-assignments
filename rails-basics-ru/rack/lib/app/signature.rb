@@ -12,7 +12,11 @@ class Signature
     status, headers, body = @app.call(env)
     request = Rack::Request.new(env)
     crypted_body = Digest::SHA2.new(256).hexdigest(body.join)
-    [status, headers, [crypted_body]]
+    if status == 200
+      [status, headers, [body.join + crypted_body]]
+    else
+      [status, headers, body]
+    end
     # END
   end
 end
