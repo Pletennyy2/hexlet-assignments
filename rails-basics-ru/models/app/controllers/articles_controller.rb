@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    if params[:id].present?
+      @article = Article.find(params[:id])
+    else
+      @article = Article.first
+    end
   end
 end
