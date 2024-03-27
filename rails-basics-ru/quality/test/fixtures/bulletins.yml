@@ -1,0 +1,9 @@
+bulletin1:
+  title: Test Bulletin 1
+  body: This is the first test bulletin
+  published: true
+
+bulletin2:
+  title: Test Bulletin 2
+  body: This is the second test bulletin
+  published: false
