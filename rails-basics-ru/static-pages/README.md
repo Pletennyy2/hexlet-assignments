@@ -25,7 +25,6 @@
 
 ## Задачи
 
-
 ### app/controllers/home_controller.rb
 
 Сгенерируйте контроллер и экшен *index*.
