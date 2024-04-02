@@ -1,0 +1,42 @@
+<%= form_with model: @task do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <br>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+    <br>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.text_field :status %>
+    <br>
+  </div>
+
+  <div>
+    <%= form.label :creator %><br>
+    <%= form.text_field :creator %>
+    <br>
+  </div>
+
+    <div>
+    <%= form.label :performer %><br>
+    <%= form.text_field :performer %>
+    <br>
+  </div>
+
+ <div>
+    <%= form.label :completed %><br>
+    <%= form.check_box :completed %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.submit %><br>
+  </div>
+<% end %>
