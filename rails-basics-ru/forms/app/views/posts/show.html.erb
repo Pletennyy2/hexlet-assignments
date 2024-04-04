@@ -1,0 +1,15 @@
+<h1>Post №<%= @post.id %></h1>
+
+
+<p><%= @post.title %></p> <!-- можно написать просто post вместо post.id -->
+<p><%= @post.body %></p> 
+<p><%= @post.summary %></p> 
+<p><%= @post.published %></p> 
+<hr>
+
+<%= link_to 'Edit', edit_post_path(@post) %>
+<%= link_to 'Delete', post_path(@post), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+<%= link_to 'Back', root_path %>

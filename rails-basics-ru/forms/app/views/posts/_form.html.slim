@@ -1,0 +1,41 @@
+/ = form_with model: @task do |form|
+/   div
+/     = form.label :name
+/     br
+/     = form.text_field :name
+/     br
+/   div
+/     = form.label :description
+/     br
+/     = form.text_field :description
+/     br
+/   div
+/     = form.label :status
+/     br
+/     = form.text_field :status
+/     br
+/   div
+/     = form.label :creator
+/     br
+/     = form.text_field :creator
+/     br
+/   div
+/     = form.label :performer
+/     br
+/     = form.text_field :performer
+/     br
+/   div
+/     = form.label :completed
+/     br
+/     = form.check_box :completed
+/   br
+/   div
+/     = form.submit
+/     br
+
+= simple_form_for post do |f|
+  = f.input :title
+  = f.input :body
+  = f.input :summary
+  = f.input :published, as: :boolean
+  = f.button :submit
