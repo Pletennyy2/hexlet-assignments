@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: Task 1
+  description: Task 1 description
+  user_id: 1
+  status_id: 1
+
+two:
+  id: 2
+  name: Task 2
+  description: Task 2 description
+  user_id: 2
+  status_id: 2

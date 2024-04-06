@@ -1,0 +1,12 @@
+<h1>Task №<%= @task.id %></h1>
+
+
+<p><strong>Name:</strong> <%= @task.name %></p>
+<p><strong>Description:</strong> <%= @task.description %></p>
+<p><strong>User:</strong> <%= @task.user.name %></p>
+<p><strong>Status:</strong> <%= @task.status.name %></p>
+<hr>
+
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Delete', task_path(@task), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } %>
+<%= link_to 'Back', root_path %>
