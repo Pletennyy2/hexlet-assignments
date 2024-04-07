@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # BEGIN
   resources :posts, shallow: true do
     scope module: :posts do
-      resources :post_comments
+      resources :comments, only: %i[create edit update destroy]
     end
   end
   # END
