@@ -1,0 +1,9 @@
+ru:
+  layouts:
+    application:
+      hexlet_title: © Хекслет, %{year}
+      title: ‘Международные популяризаторы’
+    shared:
+      nav:
+        hexlet_logo: Хекслет
+        home: Домой
