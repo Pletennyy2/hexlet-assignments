@@ -1,16 +1,16 @@
 require 'csv'
-
+require 'date'
 
 namespace :hexlet do
-  desc "Import users from CSV file"
-  task import_users: :environment do
-    file_path = "test/fixtures/files/users.csv"
-    users = []
-
-    CSV.foreach(file_path, headers: true) do |row|
-      users << User.create(row.to_h)
+  desc "Import users from csv file, by the path"
+  task :import_users, [:path] => :environment do |t, args|
+    if !args[:path]
+      print 'There is no file path in arguments'
+      return
     end
 
-    puts "#{users.count} users imported successfully."
+    CSV.foreach(args[:path], headers: true, converters: [->(v) { Date.strptime(v, "%m/%d/%Y") rescue v }]) do |row|
+      User.create(row.to_h)
+    end
   end
 end
