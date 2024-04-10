@@ -1,9 +1,9 @@
 require 'csv'
 
 
-namespace :csv do
-  desc "TODO"
-  task load: :environment do
+namespace :hexlet do
+  desc "Import users from CSV file"
+  task import_users: :environment do
     file_path = "test/fixtures/files/users.csv"
     users = []
 
@@ -13,5 +13,4 @@ namespace :csv do
 
     puts "#{users.count} users imported successfully."
   end
-
 end
